@@ -1,3 +1,4 @@
-.container {
-  padding-top: 10px;
+.pie {
+  background: url('../images/pie.png');
+  background-repeat: no-repeat;
 }

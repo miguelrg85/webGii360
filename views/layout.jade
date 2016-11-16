@@ -4,6 +4,41 @@ html
     title= title
     link(rel='stylesheet' href='/stylesheets/semantic.css')
     link(rel='stylesheet' href='/stylesheets/style.css')
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/semantic.js')
+    script(src='javascripts/scripts.js')
     meta(charset='utf-8')
   body
-    block content
+    .ui.container
+      .row
+        .ui.grey.seven.item.inverted.menu.huge
+          a.active.item
+            i.home.icon
+            | Home
+          a.item
+            i.user.icon
+            | Quienes somos  
+          a.item
+            i.browser.icon
+            | Servicios
+          a.item
+            i.bar.chart.icon
+            | Encuestas
+          a.item
+            i.line.chart.icon
+            | GiiData
+          a.item
+            i.newspaper.icon
+            | GiiNews
+          a.item
+            i.mail.icon
+            | Contacto
+      block content
+      .ui.two.column.grid.pie
+        .column.center.aligned
+          img(src='../images/logotipo_ISO_2016.png')
+        .column.center.aligned
+          a(href='http://www.google.com') Aviso de privacidad
+          
+          
+      
