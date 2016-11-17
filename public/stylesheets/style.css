@@ -2,3 +2,16 @@
   background: url('../images/pie.png');
   background-repeat: no-repeat;
 }
+
+.correo {
+  font-size: 18px;
+  color: red;
+}
+.slogan {
+  font-size: 18px;
+}
+
+.aviso {
+  font-size: 18px;
+  color: red;
+}

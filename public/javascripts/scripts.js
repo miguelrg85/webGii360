@@ -1,4 +1,6 @@
-$('.ui.sidebar').sidebar({
-    context: $('.pushable.segment'),
-    transition: 'overlay'
-}).sidebar('attach events', 'a#hamburger-link');
+  $('#aviso').click(function(){
+    $('.bxslider').bxSlider({
+      infiniteLoop: false,
+      hideControlOnEnd: true
+    });
+  });

@@ -3,15 +3,17 @@ html
   head
     title= title
     link(rel='stylesheet' href='/stylesheets/semantic.css')
+    link(rel='stylesheet' href='/stylesheets/jquery.bxslider.css')
     link(rel='stylesheet' href='/stylesheets/style.css')
     script(src='javascripts/jquery.min.js')
     script(src='javascripts/semantic.js')
+    script(src='javascripts/jquery.bxslider.min.js')
     script(src='javascripts/scripts.js')
     meta(charset='utf-8')
   body
     .ui.container
       .row
-        .ui.grey.seven.item.inverted.menu.huge
+        .ui.grey.seven.item.inverted.menu.stackble.huge
           a.active.item
             i.home.icon
             | Home
@@ -33,12 +35,42 @@ html
           a.item
             i.mail.icon
             | Contacto
-      block content
+    
+    .ui.container
+      img.ui.fluid.image(src='../images/header.png')
+      .ui.twelve.wide.column.centered
+        p.slogan Consultora especializada en investigación de mercados y estrategias de comunicación, así como de la opinión pública a través del contacto directo.
+  
+    block content
+    
+    .ui.container
       .ui.two.column.grid.pie
         .column.center.aligned
           img(src='../images/logotipo_ISO_2016.png')
-        .column.center.aligned
-          a(href='http://www.google.com') Aviso de privacidad
-          
-          
-      
+        .column
+          p: a.correo(href='mailto:miguel.reyes@gii360.com.mx?subject=Solicitud de contacto')
+              i.mail.icon.red.large
+              | contacto@gii360.com.mx
+          p: a.aviso(href='#' id='aviso')
+            i.lock.icon.red.large
+            | Aviso de privacidad
+        .ui.small.modal
+          .image.content
+            ul.bxslider
+              li
+                img(src='http://placehold.it/350x150&text=FooBar1')
+              li
+                img(src='http://placehold.it/350x150&text=FooBar2')
+              //- li: img(src='../images/aviso/pag3.jpg')
+              //- li: img(src='../images/aviso/pag4.jpg')
+              //- li: img(src='../images/aviso/pag5.jpg')
+              //- li: img(src='../images/aviso/pag6.jpg')
+  script.
+    $(document).ready(function(){
+      $('#aviso').click(function(){
+        $('.bxslider').bxSlider({
+          infiniteLoop: false,
+          hideControlOnEnd: true
+        });
+      });
+    });
